@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
 	tab: {
 		flex: 1,
 		backgroundColor: '#2a8bb9',
-		padding: 12,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	tabText: {
 		color: 'white',
