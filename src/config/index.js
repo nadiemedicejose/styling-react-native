@@ -15,7 +15,7 @@ export const defaultState = [
 			key: "concert-2.5",
 			name: "The Happy Harpsichordist",
 			date: new Date("Mar 26 2020"),
-			
+
 		}]
 	},
 	{
@@ -50,6 +50,38 @@ export const defaultState = [
 			date: new Date("May 7 2020")
 		}, {
 			key: "concert-8",
+			name: "The Daring Drummers",
+			date: new Date("May 18 2020")
+		}]
+	},
+	{
+		title: "May",
+		data: [{
+			key: "concert-9",
+			name: "The Quiet Choir",
+			date: new Date("May 1 2020")
+		}, {
+			key: "concert-10",
+			name: "Awesome Euphonium",
+			date: new Date("May 7 2020")
+		}, {
+			key: "concert-11",
+			name: "The Daring Drummers",
+			date: new Date("May 18 2020")
+		}, {
+			key: "concert-12",
+			name: "Awesome Euphonium",
+			date: new Date("May 7 2020")
+		}, {
+			key: "concert-13",
+			name: "The Daring Drummers",
+			date: new Date("May 18 2020")
+		}, {
+			key: "concert-14",
+			name: "Awesome Euphonium",
+			date: new Date("May 7 2020")
+		}, {
+			key: "concert-15",
 			name: "The Daring Drummers",
 			date: new Date("May 18 2020")
 		}]

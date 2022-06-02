@@ -27,7 +27,7 @@ export const HomeScreen = ({navigation})=>{
 			</View>
 
 			<View style={styles.homeFooter}>
-				<Text>&copy; 2020 Globoticket</Text>
+				<Text style={styles.homeFooterText}>&copy; 2020 Globoticket</Text>
 			</View>
 		</View>
 	)
@@ -39,10 +39,21 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 	homeBody: {
-		flex: 7,
+		flex: 15,
 	},
 	homeFooter: {
 		flex: 1,
+		alignSelf: 'stretch',
+		justifyContent: 'flex-end',
+		borderTopWidth: StyleSheet.hairlineWidth,
+		borderColor: '#19526d',
+		backgroundColor: 'steelblue',
+	},
+	homeFooterText: {
+		fontSize: '2vh',
+		textAlign: 'center',
+		color: 'white',
+		marginBottom: '0.5vh'
 	},
 	sectionHeader: {
 		paddingVertical: 2,
@@ -51,6 +62,7 @@ const styles = StyleSheet.create({
 		color: 'white',
 		backgroundColor: '#19526d',
 		borderColor: '#19526d',
-		borderBottomWidth: StyleSheet.hairlineWidth
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		fontSize: '2.5vh',
 	}
 })
