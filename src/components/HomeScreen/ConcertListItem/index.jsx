@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Animated } from 'react-native';
 
 const styles = StyleSheet.create({
 	item: {
@@ -29,15 +29,27 @@ const styles = StyleSheet.create({
 	}
 })
 
-export const ConcertListItem = ({navigation, item}) => {
+export const ConcertListItem = ({navigation, item, handleInteraction}) => {
+	const widthAnimation = useRef(new Animated.Value(2)).current;
 
     return (
 
-      <TouchableHighlight onPress={()=> navigation.navigate("Details", {item})}>
+      <TouchableHighlight onPress={()=> {
+		  Animated.timing(
+			  widthAnimation,
+			  {
+				  toValue: 0,
+				  duration: 250
+			  }
+		  ).start(() => {
+			  handleInteraction(item);
+			  widthAnimation.setValue(2);
+		  });
+	  }}>
 
 			<View style={styles.item}>
 
-				<View style={styles.tab}>
+				<Animated.View style={[styles.tab, {flex:widthAnimation}]}>
 
 					<Text style={styles.tabText}>
 
@@ -45,7 +57,7 @@ export const ConcertListItem = ({navigation, item}) => {
 
 					</Text>
 
-				</View>
+				</Animated.View>
 
 				<View style={styles.tabCenter}>
 
