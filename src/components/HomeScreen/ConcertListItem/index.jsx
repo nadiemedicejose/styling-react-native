@@ -4,28 +4,24 @@ import { Text, View, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	item: {
-		//padding: 10,
-		height: 44,
 		borderBottomColor: '#19526d',
-		borderBottomWidth: StyleSheet.hairlineWidth
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		flex: 1,
+		flexDirection: 'row',
 	},
 	tab: {
-		width: 68,
+		flex: 1,
 		backgroundColor: '#2a8bb9',
 		padding: 12,
-		position: 'absolute',
-		left: 0
 	},
 	tabText: {
 		color: 'white',
-		fontSize: 14,
+		fontSize: '2vh',
 		whiteSpace: 'nowrap'
 	},
 	tabCenter: {
-		width: 272,
+		flex: 5,
 		padding: 12,
-		position: 'absolute',
-		right: 0
 	}
 })
 
